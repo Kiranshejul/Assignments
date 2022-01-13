@@ -1,4 +1,4 @@
-import java.util.*;
+
 public class IntrestRate {
 
 	public static void main(String[] args) {

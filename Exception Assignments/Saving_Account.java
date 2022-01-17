@@ -26,19 +26,19 @@ public class Account {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner sc=new Scanner(System.in);
+		Scanner sca=new Scanner(System.in);
 		
 		try {
 			//Condition A
 			System.out.println("Enter ID: ");
-			long id=sc.nextLong();
+			long id=sca.nextLong();
 			System.out.println("Enter Balance: ");
-			double balance=sc.nextDouble();
+			double balance=sca.nextDouble();
 			
 			System.out.println("Enter deposite Amount: ");
-			double deposit=sc.nextDouble();
+			double deposit=sca.nextDouble();
 			System.out.println("Enter withdraw Amount: ");
-			double withdraw=sc.nextDouble();
+			double withdraw=sca.nextDouble();
 			if(withdraw<=0 || withdraw>balance) {
 				throw new InsuficientBalanceException("Insufficient Balance ");
 			}

@@ -1,0 +1,33 @@
+// case a:HashMap application for key=string,value=string
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class example {
+	public static void main(String[] args)
+	{
+		HashMap<String ,String>map=new HashMap<>();
+		map.put("5", "Banana");
+		map.put("14", "Chicku");
+		System.out.println(map);
+		for(Map.Entry m:map.entrySet())
+	    {
+	    	System.out.println(m.getKey()+" "+m.getValue());
+	    }
+	}
+}
+
+// case b. key=string value=date
+
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+public class example {
+	public static void main(String[] args)
+	{
+		HashMap<String ,Date>map=new HashMap<>();
+		map.put("Today is", new java.util.Date());
+		System.out.println(map);	
+	}
+}

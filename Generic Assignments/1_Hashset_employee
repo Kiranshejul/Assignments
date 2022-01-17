@@ -1,0 +1,28 @@
+import java.util.HashSet;
+public class employee {
+public static void main(String[] args)
+{
+	Set<emp>set=new HashSet<emp>();
+	emp k=new emp(4,"Amey","Electronic",40000.50);
+	set.add(k);
+	for(emp k1:set)
+	{
+		System.out.println(k.id+" "+k.name+" "+k.dept+" "+k.sal);
+	}
+}
+}
+
+public class emp {
+	int id;
+	String name;
+    String dept;
+	double sal;
+  
+	public emp(int id, String name, String dept, double sal) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.dept = dept;
+		this.sal = sal;
+	}
+}

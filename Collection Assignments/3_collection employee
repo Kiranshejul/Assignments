@@ -1,0 +1,70 @@
+import java.io.*;
+import java.util.*;
+class Employee{
+
+	private int id,sal;
+	private String name,dept;
+
+	public Employee(int id, String name, String dept, int sal)
+	{
+		this.id=id;
+		this.name=name;      //constructer
+		this.dept=dept;
+		this.sal=sal;
+	}
+	public String getName()
+	{
+		return name;
+	}
+	public void setName(String name)
+	{
+		this.name= name;
+	}
+	public int getID()
+    {
+        return id;
+    }
+	public String getDept()
+    {
+        return dept;
+    }
+	public int getSal()
+    {
+        return sal;
+    }
+	
+}
+
+
+class myComparator implements Comparator<Employee>
+{
+	public int compare(Employee e1, Employee e2)
+	{
+		return e1.getName().compareTo(e2.getName());
+	}
+}
+
+class Employee1 {
+
+	public static void main (String[] args){
+		
+		
+		Set<Employee> e= new TreeSet<Employee>(new myComparator());
+		e.add(new Employee(450,"Kalyan", "Technical", 20000));
+		e.add(new Employee(450,"Rahul", "NonTechnical", 21000));
+		e.add(new Employee(450,"Rohit", "IT", 22000));
+		e.add(new Employee(450,"Ganesh", "Mechanical", 23000));
+		e.add(new Employee(450,"Mukesh", "Data Analyst", 24000));
+		e.add(new Employee(450,"Nikhil", "Chemical", 25000));
+		e.add(new Employee(450,"Santosh", "Database", 26000));
+		e.add(new Employee(450,"Omkar", "Developer", 20800));
+		e.add(new Employee(450,"Ritesh", "Technical", 28000));
+		
+		for(Employee ele: e)
+		{
+			System.out.print(ele.getName()+" "+ele.getID()+ " "+ele.getDept()+" "+ele.getSal());
+			System.out.println();
+		}	
+
+	}
+}

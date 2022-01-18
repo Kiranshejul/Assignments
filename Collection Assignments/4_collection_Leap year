@@ -1,0 +1,40 @@
+import java.util.*;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDate;
+
+
+public class leap {
+
+	public static void main(String[] args) {
+  
+		LocalDate d1 = LocalDate.of(2001, 2, 1);
+		LocalDate d2 = LocalDate.of(2007, 5, 20);
+		LocalDate d3 = LocalDate.of(2008, 7, 25);
+		LocalDate d4 = LocalDate.of(2000, 12, 11);
+		
+		LinkedList<LocalDate> list = new LinkedList<LocalDate>();
+		
+		list.add(d1);
+		list.add(d2);
+		list.add(d3);
+		list.add(d4);
+		
+		for(LocalDate l : list)
+		{
+			String Date = l.format(DateTimeFormatter.ofPattern("dd-MM-YYYY"));
+			
+			if(l.isLeap())
+			{
+				System.out.println(" Date of Birth " );
+				System.out.println(  Date + " and leap year");
+			}
+			else
+			{
+				System.out.println(" Date of Birth ");
+				System.out.println( Date + " and  Not a leap year");
+			}
+		}
+		
+	}
+
+}

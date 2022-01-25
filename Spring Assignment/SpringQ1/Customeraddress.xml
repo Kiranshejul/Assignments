@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">	
+
+	<bean id="addressA" class="hii.Address" >
+	<property name="city" value=" PUNE " />
+	<property name="state" value=" MH " />
+	<property name="country" value=" INDIA " />
+	<property name="zip" value=" 7777 " />
+	<property name="street" value=" GATEWAY" />
+	</bean>
+	
+	<bean id="obj" class="hii.customer" >
+	<property name="custID" value="30" />
+	<property name="custNM" value="KIRAN" />
+	<property name="custNO" value="9766186458" />
+	<property name="address" ref="addressA" />
+	</bean>
+</beans> 
